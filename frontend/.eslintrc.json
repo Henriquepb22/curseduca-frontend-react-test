@@ -28,7 +28,5 @@
             "version": "detect"
         }
     },
-    "rules": {
-        "@typescript-eslint/explicit-module-boundary-types": "off"
-    }
+    "rules": {}
 }
