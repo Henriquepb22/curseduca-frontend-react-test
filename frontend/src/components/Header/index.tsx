@@ -8,6 +8,7 @@ const Header: React.FC = () => {
             <Navbar.Brand href="/">
                 <img src="./images/logo.png" alt="Curseduca" />
             </Navbar.Brand>
+            <Navbar.Collapse></Navbar.Collapse>
         </Navbar>
     );
 };
