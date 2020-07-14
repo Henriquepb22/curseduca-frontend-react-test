@@ -1,9 +1,13 @@
 import React from "react";
 
-function App() {
+import Header from "./components/Header";
+import Form from "./components/Form";
+
+function App(): JSX.Element {
     return (
         <div>
-            <h1>Teste Frontend</h1>
+            <Header />
+            <Form />
         </div>
     );
 }
