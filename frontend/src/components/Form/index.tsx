@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
@@ -9,6 +10,7 @@ import api from "../../services/api";
 const FormComponent: React.FC = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const history = useHistory();
 
     async function handleLogin(e: React.FormEvent) {
         e.preventDefault();
@@ -18,11 +20,11 @@ const FormComponent: React.FC = () => {
             password,
         });
 
-        console.log(res);
-
         const token = "Bearer " + res.data.access_token;
 
         sessionStorage.setItem("token", token);
+
+        history.push("/dashboard");
     }
 
     return (
